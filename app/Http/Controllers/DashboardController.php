@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Session as Book;
+use Session;
+use Auth;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -11,9 +13,41 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    public function booksessions(Request $request)
     {
-        //
+        $this->validate($request,[
+            "name_organisation"=>"required",
+            "expected"=>"required",
+            "venue"=>"required",
+            "location"=>"required",
+            "trainnig"=>"required",
+            "time"=>"required",
+        ]);
+        $user=Auth::user();
+        $session=new Book;
+        $session->name_organisation=$request->name_organisation;
+        $session->expected=$request->expected;
+        $session->venue=$request->venue;
+        $session->location=$request->location;
+        $session->trainnig=$request->trainnig;
+        $session->time=$request->time;
+        $session->user()->associate($user);
+        if($session->save()){
+            Session::flash('success', "You successfully booked your session");
+            return redirect()->back();
+        }
+        Session::flash('message', "An error occured");
+            return redirect()->back();
+
+    }
+    public function sessions()
+    {
+        //getting user id
+        $id=Auth::user()->id;
+        //all sessions
+        $sessions=Book::whereUser_id($id)->get();
+        return view('dashboard.sessions', compact('sessions'));
     }
 
     /**
