@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="{{ asset('dashboard/vendors/css/vendor.bundle.base.css') }}">
   <link rel="stylesheet" href="{{ asset('vendors/css/vendor.bundle.addons.css') }}">
   <link rel="stylesheet" href="{{ asset('dashboard/css/style.css') }}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="shortcut icon" href="" />
+  <link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
 </head>
 
 <body>
@@ -29,5 +31,15 @@
   <script src="{{ asset('dashboard/vendors/js/vendor.bundle.addons.js') }}"></script>
   <script src="{{ asset('dashboard/js/off-canvas.js') }}"></script>
   <script src="{{ asset('dashboard/js/misc.js') }}"></script>
+  <script src="{{ asset('js/toastr.js') }}"></script>
+  <script>
+@if(Session::has('success'))
+	toastr.success("{{Session::get('success')}}");
+@elseif(Session::has('info'))
+	toastr.info("{{Session::get('info')}}");
+@elseif(Session::has('admitted'))
+	toastr.info("{{Session::get('admitted')}}");
+@endif
+</script>
     </body>
 </html>

@@ -4,10 +4,11 @@
             <div class="nav-link">
               <div class="user-wrapper">
                 <div class="profile-image">
-                  <img src="images/face1.jpg" alt="profile image">
+                  <!-- <img src="" alt="profile image"> -->
+                  <i class="fa fa-user"></i>
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name">Daniel Chinagozi</p>
+                  <p class="profile-name">{{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</p>
                   <div>
                     <small class="designation text-muted">Trainer</small>
                     <span class="status-indicator online"></span>
@@ -20,7 +21,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{ route('dashboard')}}">
               <i class="menu-icon mdi mdi-television"></i>
               <span class="menu-title">Trainers dashboard</span>
             </a>
@@ -34,10 +35,10 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="book.html">book session</a>
+                  <a class="nav-link" href="{{route('booksession')}}">book session</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="sessions.html">All sessions</a>
+                  <a class="nav-link" href="{{route('allsessions')}}">All sessions</a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="#">Accept | Reject session</a>
@@ -54,10 +55,10 @@
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="report.html">Submit report</a>
+                    <a class="nav-link" href="#">Submit report</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="all reports.html">All reports</a>
+                    <a class="nav-link" href="{{ route('report')}}">All reports</a>
                   </li>
               </ul>
             </div>

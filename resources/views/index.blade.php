@@ -10,7 +10,7 @@
                             <h1>BOOST YOUR BUSINESS</h1>
                             <span>with</span>
                             <h3 class="facebook-color">facebook</h3>
-                            <p class="index-p"><em>Login or Register to get started in becoming a trainer and booking a session</em></p>
+                            <p class="index-p"><em><a href="{{URL('/login')}}">Login</a> or <a href="{{URL('/register')}}">Register</a> to get started in becoming a trainer and booking a session</em></p>
                             <button type="button" class="btn btn-primary index-button index-p">Book session<i class="far fa-arrow-alt-circle-right fa-color"></i></button>
                         </div>
                     </div>

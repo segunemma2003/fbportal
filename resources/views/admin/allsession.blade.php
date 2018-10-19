@@ -6,7 +6,11 @@
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">All training sessions</h4>
+
                       <div class="table-responsive">
+                        @if($sessions->isEmpty() )
+                        <h2>No records yet</h2>
+                        @else
                         <table class="table table-striped">
                           <thead>
                             <tr>
@@ -34,27 +38,34 @@
                             </tr>
                           </thead>
                           <tbody>
+                            @foreach($sessions as $session)
                             <tr>
                               <td class="py-1">
-                              1
+                              {{$session->id}}
                               </td>
                               <td>
-                                Bamidele Segun
+                              {{$session->user->first_name}} {{$session->user->last_name}}
                               </td>
                               <td>
-                                266
+                                {{$session->expected}}
                               </td>
                               <td>
-                                2018-6-8
+                                  {{$session->trainnig}}
                               </td>
                               <td>
-                                9am
+                                {{$session->time}}
                               </td>
                               <td>
-                                Learn factory Aba north
+                                {{$session->location}}
                               </td>
                               <td>
-                                Pending
+                                @if($session->status==0)
+                                {{'pending'}}
+                                @elseif($session->status==1)
+                                {{'accepted'}}
+                                @else
+                                {{'rejected'}}
+                                @endif
                               </td>
                               <td>
                                 <div class="btn-group dropdown">
@@ -62,52 +73,18 @@
                                     Manage
                                   </button>
                                   <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{route('session.decision',[$session->id,1])}}">
                                       <i class="fa fa-reply fa-fw"></i>Approve</a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{route('session.decision',[$session->id,2])}}">
                                       <i class="fa fa-history fa-fw"></i>Disapprove</a>
                                   </div>
                                 </div>
                               </td>
                             </tr>
-                            <tr>
-                              <td class="py-1">
-                                1
-                              </td>
-                              <td>
-                                Bamidele Segun
-                              </td>
-                              <td>
-                                  266
-                              </td>
-                              <td>
-                                2018-6-8
-                              </td>
-                              <td>
-                                9am
-                              </td>
-                              <td>
-                                IGHUB, Aba south
-                              </td>
-                              <td>
-                                Pending
-                              </td>
-                              <td>
-                                <div class="btn-group dropdown">
-                                  <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Manage
-                                  </button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">
-                                      <i class="fa fa-reply fa-fw"></i>Approve</a>
-                                    <a class="dropdown-item" href="#">
-                                      <i class="fa fa-history fa-fw"></i>Disapprove</a>
-                                  </div>
-                                </div>
-                              </td>
-                            </tr>
+                            @endforeach
                           </tbody>
                         </table>
+                        @endif
                       </div>
                     </div>
                   </div>

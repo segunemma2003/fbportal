@@ -4,10 +4,11 @@
             <div class="nav-link">
               <div class="user-wrapper">
                 <div class="profile-image">
-                  <img src="../images/faces/face1.jpg" alt="profile image">
+                  <!-- <img src="" alt="profile image"> -->
+                  <i class="fa fa-user"></i>
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name">Daniel Chinagozi</p>
+                  <p class="profile-name">{{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</p>
                   <div>
                     <small class="designation text-muted">Trainer</small>
                     <span class="status-indicator online"></span>
@@ -17,7 +18,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{route('admin')}}">
               <i class="menu-icon mdi mdi-television"></i>
               <span class="menu-title">Admin dashboard</span>
             </a>
@@ -31,7 +32,7 @@
             <div class="collapse" id="sesmgt">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="all session.html">All sessions</a>
+                  <a class="nav-link" href="{{ route('admin.allsession')}}">All sessions</a>
                 </li>
               </ul>
             </div>
@@ -46,10 +47,10 @@
           <div class="collapse" id="tmgt">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item">
-                <a class="nav-link" href="trainers.html">All trainers</a>
+                <a class="nav-link" href="{{ route('admin.trainers')}}">All trainers</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="trainees.html">All trainees</a>
+                <a class="nav-link" href="{{ route('admin.trainees')}}">All trainees</a>
               </li>
             </ul>
           </div>
@@ -63,7 +64,7 @@
             <div class="collapse" id="repmgt">
               <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="reports.html">All reports</a>
+                    <a class="nav-link" href="{{ route('admin.reports')}}">All reports</a>
                   </li>
                   <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Approved reports</a>

@@ -7,6 +7,10 @@
                     <div class="card-body">
                       <h4 class="card-title">All training sessions</h4>
                       <div class="table-responsive">
+                        @if($users->isEmpty())
+                        <h3>No Trainers registered yet
+                        </h3>
+                        @else
                         <table class="table table-striped">
                           <thead>
                             <tr>
@@ -31,48 +35,34 @@
                             </tr>
                           </thead>
                           <tbody>
+                            @foreach($users as $user)
                             <tr>
                               <td class="py-1">
-                              1
+                              {{$loop->index+1}}
                               </td>
                               <td>
-                                Bamidele Segun
+                                {{$user->first_name}} {{$user->last_name}}
                               </td>
                               <td>
-                                07031362300
+                            {{$user->phone}}
                               </td>
                               <td>
-                                kreativejosh@gmail.com
+                                {{$user->email}}
                               </td>
                               <td>
                                 Aba
                               </td>
                               <td>
-                                active
+                                @if($user->verified==0)
+                                {{'inactive'}}
+                                @else
+                                {{'active'}}
+                                @endif
                               </td>
                             </tr>
-                            <tr>
-                              <td class="py-1">
-                                1
-                              </td>
-                              <td>
-                                Bamidele Segun
-                              </td>
-                              <td>
-                                  07036074665
-                              </td>
-                              <td>
-                                textnature@gmail.com
-                              </td>
-                              <td>
-                                Aba
-                              </td>
-                              <td>
-                                inactive
-                              </td>
-                            </tr>
-                          </tbody>
+                            @endforeach
                         </table>
+                        @endif
                       </div>
                     </div>
                   </div>
