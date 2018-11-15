@@ -36,9 +36,13 @@
 @if(Session::has('success'))
 	toastr.success("{{Session::get('success')}}");
 @elseif(Session::has('info'))
-	toastr.info("{{Session::get('info')}}");
-@elseif(Session::has('admitted'))
-	toastr.info("{{Session::get('admitted')}}");
+	toastr.error("{{Session::get('info')}}");
+@elseif(Session::has('msg'))
+	toastr.info("{{Session::get('msg')}}");
+@elseif(Session::has('errors'))
+    @foreach($errors->all() as $error)
+        toastr.error('{{$error}}');
+    @endforeach
 @endif
 </script>
     </body>

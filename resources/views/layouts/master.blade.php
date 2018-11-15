@@ -24,8 +24,12 @@
 	toastr.success("{{Session::get('success')}}");
 @elseif(Session::has('info'))
 	toastr.info("{{Session::get('info')}}");
-@elseif(Session::has('admitted'))
-	toastr.info("{{Session::get('admitted')}}");
+@elseif(Session::has('message'))
+	toastr.info("{{Session::get('message')}}");
+@elseif(Session::has('errors'))
+    @foreach($errors->all() as $error)
+        toastr.error('{{$error}}');
+    @endforeach
 @endif
 </script>
 </body>

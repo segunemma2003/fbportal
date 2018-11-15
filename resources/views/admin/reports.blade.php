@@ -5,13 +5,18 @@
               <div class="col-lg-12 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">All training sessions</h4>
+                      <h4 class="card-title">All training reports</h4>
+                      @if(count($reports)<'1')
+                      <div class="alert alert-danger">
+                        No Report Yet!!!
+                      </div>
+                      @else
                       <div class="table-responsive">
                         <table class="table table-striped">
                           <thead>
                             <tr>
                               <th>
-                                Session ID
+                              No
                               </th>
                               <th>
                                 Trainers name
@@ -20,11 +25,11 @@
                                 Expected Nos
                               </th>
                               <th>
-                                Training date
+                                Date/Time Submitted
                               </th>
                               <th>
-                                Training time
-                              </th>
+                                Venue
+                                </th>
                               <th>
                                 Status
                               </th>
@@ -34,29 +39,36 @@
                             </tr>
                           </thead>
                           <tbody>
+                          @foreach($reports as $report)
                             <tr>
                               <td class="py-1">
-                              1
+                              {{$loop->index+1}}
                               </td>
                               <td>
-                                Bamidele Segun
+                                {{$report->session->user->first_name}} {{$report->session->user->last_name}}
                               </td>
                               <td>
-                                266
+                                {{$report->session->expected}}
                               </td>
                               <td>
-                                2018-6-8
+                                {{$report->created_at}}
                               </td>
                               <td>
-                                9am
+                              {{$report->session->venue}}
                               </td>
                               <td>
-                                Learn factory Aba north
+                              @if($report->status=='0')
+                                  pending
+                                @elseif($report->status=='1')
+                                  Approved
+                                @else
+                                  Disaaproved
+                                @endif
                               </td>
                               <td>
-                                Pending
+                                <a class="btn btn-primary btn-lg" href="{{ route('admin.eachreport',$report->id) }}">Manage</a>
                               </td>
-                              <td>
+                              <!-- <td>
                                 <div class="btn-group dropdown">
                                   <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Manage
@@ -68,47 +80,14 @@
                                       <i class="fa fa-history fa-fw"></i>Disapprove</a>
                                   </div>
                                 </div>
-                              </td>
+                              </td> -->
                             </tr>
-                            <tr>
-                              <td class="py-1">
-                                1
-                              </td>
-                              <td>
-                                Bamidele Segun
-                              </td>
-                              <td>
-                                  266
-                              </td>
-                              <td>
-                                2018-6-8
-                              </td>
-                              <td>
-                                9am
-                              </td>
-                              <td>
-                                IGHUB, Aba south
-                              </td>
-                              <td>
-                                Pending
-                              </td>
-                              <td>
-                                <div class="btn-group dropdown">
-                                  <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Manage
-                                  </button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">
-                                      <i class="fa fa-reply fa-fw"></i>Approve</a>
-                                    <a class="dropdown-item" href="#">
-                                      <i class="fa fa-history fa-fw"></i>Disapprove</a>
-                                  </div>
-                                </div>
-                              </td>
-                            </tr>
+                            @endforeach
                           </tbody>
                         </table>
+                        <a href="{{route('admin.export') }}" class="btn btn-lg btn-success">Download all reports in excel</a>
                       </div>
+                      @endif
                     </div>
                   </div>
                 </div>

@@ -48,7 +48,7 @@
                             
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
                                  <a href="{{ route('password.request') }}"><p class="text-right text-muted" style="margin-top: 10px;"><em>forgot password?</em></p></a>
-                                    <p style="margin-top: 20px;"><a href="{{ route('register') }}" class="logina">Not registered yet. Click to register</a></p>
+                                    <p style="margin-top: 20px;"><a href="#" class="logina">Not registered yet. Click to register</a></p>
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">

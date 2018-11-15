@@ -23,7 +23,9 @@
           <li class="nav-item dropdown d-none d-xl-inline-block">
             <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <span class="profile-text">Hello, {{ Auth::user()->first_name}} {{ Auth::user()->last_name}} !</span>
-              <img class="img-xs rounded-circle" src="../images/faces/face1.jpg" alt="Profile image">
+              @if(Auth::user()->profile)
+              <img class="img-xs rounded-circle" src="/storage/upload/{{Auth::user()->profile->profile_picture}}" alt="Profile image">
+              @endif
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
               <a class="dropdown-item p-0">
@@ -39,7 +41,7 @@
                   </div>
                 </div>
               </a>
-              <a class="dropdown-item mt-2">
+              <a href="{{ route('pswd') }}" class="dropdown-item mt-2">
                 Manage Accounts
               </a>
               <a class="dropdown-item" href="{{ route('logout') }}"

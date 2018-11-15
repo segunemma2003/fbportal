@@ -6,74 +6,84 @@
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">All training sessions</h4>
-                      <div class="table-responsive">
-                        <table class="table table-striped">
-                          <thead>
-                            <tr>
-                              <th>
-                                Session ID
-                              </th>
-                              <th>
-                                Trainers name
-                              </th>
-                              <th>
-                                Expected Nos
-                              </th>
-                              <th>
-                                Training date
-                              </th>
-                              <th>
-                                Training time
-                              </th>
-                              <th>
-                                Status
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td class="py-1">
-                              1
-                              </td>
-                              <td>
-                                Bamidele Segun
-                              </td>
-                              <td>
-                                266
-                              </td>
-                              <td>
-                                2018-6-8
-                              </td>
-                              <td>
-                                9am
-                              </td>
-                              <td>
-                                Approved
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="py-1">
-                                1
-                              </td>
-                              <td>
-                                Bamidele Segun
-                              </td>
-                              <td>
-                                  266
-                              </td>
-                              <td>
-                                2018-6-8
-                              </td>
-                              <td>
-                                9am
-                              </td>
-                              <td>
-                                Declined
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                      @if(count($reports)<1)
+                        <div class="alert alert-danger">
+                        You have no reports yet
+                        </div>
+                      @else
+                       
+                              <div class="table-responsive">
+                                <table class="table table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        No
+                                      </th>
+                                      <!-- <th>
+                                        Trainers name
+                                      </th> -->
+                                      <th>
+                                        Session
+                                      </th>
+                                      <th>
+                                        Date and time Submitted
+                                      </th>
+                                      <!-- <th>
+                                        Training time
+                                      </th> -->
+                                      <th>
+                                        Status
+                                      </th>
+                                      <th>
+                                        feedback
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                      
+                                    @foreach($reports as $report)
+                                    
+                                        @if($report->session->user_id == $id)
+                                            @if(!$report)
+                                            <div class="alert alert-danger">
+                                            You have no reports yet
+                                            </div>
+                                            @else
+                                              
+                                            <tr>
+                                                  <td class="py-1">
+                                                  {{$loop->iteration}}
+                                                  </td>
+                                                  <td>
+                                                    {{$report->session->name_organisation}}
+                                                  </td>
+                                                  <td>
+                                                    {{$report->created_at}}
+                                                  </td>
+                                                  <!-- <td>
+                                                    9am
+                                                  </td> -->
+                                                  <td>
+                                                    @if($report->status=='0')
+                                                      pending
+                                                    @elseif($report->status=='1')
+                                                      Approved
+                                                    @else
+                                                      Disaaproved
+                                                    @endif
+                                                  </td>
+                                                  <td>
+                                                    {{$report->reply or 'No feedback yet'}}
+                                                  </td>
+                                                </tr>
+                                        @endif
+                                        @endif
+                                    @endforeach
+                                                
+                                              </tbody>
+                                            </table>
+                                          </div>
+                    @endif
                     </div>
                   </div>
                 </div>

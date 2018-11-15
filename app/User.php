@@ -28,6 +28,10 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\VerifyUser');
     }
+    public function profile()
+    {
+        return $this->hasOne('App\Profile');
+    }
     public function sessions(){
         return $this->hasMany('App\User');
     }

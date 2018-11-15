@@ -15,7 +15,7 @@
                           <thead>
                             <tr>
                               <th>
-                                User ID
+                                No
                               </th>
                               <th>
                                 Trainers name
@@ -31,6 +31,9 @@
                               </th>
                               <th>
                                 Status
+                              </th>
+                              <th>
+                                  Profile picture
                               </th>
                             </tr>
                           </thead>
@@ -59,9 +62,19 @@
                                 {{'active'}}
                                 @endif
                               </td>
+                              <td>
+                                  @if($user->profile)
+                                    <a href="/storage/upload/{{$user->profile->profile_picture}}"><img class="img-xs rounded-circle" src="/storage/upload/{{$user->profile->profile_picture}}" alt="Profile image"></a>
+                                @else
+                                No profile picture yet
+                                @endif
+                              </td>
                             </tr>
                             @endforeach
                         </table>
+                        <div>
+                            {{$users->links()}}
+                        </div>
                         @endif
                       </div>
                     </div>

@@ -1,0 +1,61 @@
+[20-Oct-2018 13:30:48 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/blunorth/ighubfacebook34/storage/framework/views/f9f006b8653a1a864ab34bbc7f9fee5005dbb424.php on line 42
+[21-Oct-2018 14:44:54 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[21-Oct-2018 14:44:57 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[21-Oct-2018 14:48:07 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[21-Oct-2018 14:48:18 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[21-Oct-2018 14:49:43 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[21-Oct-2018 14:50:06 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[21-Oct-2018 14:50:10 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[21-Oct-2018 14:51:00 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[21-Oct-2018 14:51:55 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:51:55 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:52:24 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:52:24 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:52:31 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:52:31 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:54:38 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:54:38 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:54:44 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:54:44 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:55:19 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:55:19 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:57:42 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:57:42 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:57:44 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:57:44 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:57:55 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:57:55 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:57:55 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:57:55 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:58:14 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:58:14 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:58:24 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:58:24 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:58:34 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:58:34 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:58:36 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:58:36 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:58:38 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:58:38 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:58:40 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:58:40 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:58:42 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:58:42 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 14:58:46 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 14:58:46 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 15:00:13 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 15:00:13 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 15:00:44 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 15:00:44 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 15:02:15 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 15:02:15 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 15:03:39 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 15:03:39 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 15:04:25 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 15:04:25 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 15:06:44 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook22/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 15:06:44 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 15:08:24 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook34/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 15:08:24 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Oct-2018 15:14:49 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/blunorth/ighubfacebook22/vendor/symfony/http-foundation/Response.php on line 501
+[21-Oct-2018 15:14:49 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0

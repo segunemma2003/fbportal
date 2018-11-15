@@ -75,13 +75,26 @@
                         <div class="row">
                           <div class="col-md-6">
                             <div class="form-group row">
-                              <label class="col-sm-3 col-form-label">Proposed location</label>
+                              <label class="col-sm-3 col-form-label">Proposed LGA</label>
                               <div class="col-sm-9">
                                 <select class="form-control" name="location">
-                                  <option>Aba south</option>
+                                  <option>Aba South</option>
                                   <option>Aba North</option>
-                                  <option>Osisioma</option>
+                                  <option>Arochukwu</option>
+                                  <option>Bende</option>
+                                  <option>Ikwuano</option>
+                                  <option>Isiala Ngwa North</option>
+                                  <option>Isiala Ngwa South</option>
+                                  <option>Isiukwuato</option>
                                   <option>Obingwa</option>
+                                  <option>Ohafia</option>
+                                  <option>Osisioma Ngwa</option>
+                                  <option>Ugwunagbo</option>
+                                  <option>Ukwa East</option>
+                                  <option>Ukwa West</option>
+                                  <option>Umuahia North</option>
+                                  <option>Umuahia South</option>
+                                  <option>Umunneochi</option>
                                 </select>
                               </div>
                             </div>

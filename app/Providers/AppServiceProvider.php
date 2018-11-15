@@ -14,6 +14,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        // \App::make('files')->link('/home/blunorth/ighubfacebook3/storage/app/public', '/home/blunorth/fbportal.ighub.com.ng/storage');
     }
 
     /**

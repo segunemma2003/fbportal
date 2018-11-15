@@ -15,7 +15,7 @@
                           <thead>
                             <tr>
                               <th>
-                                Session ID
+                                No
                               </th>
                               <th>
                                 Trainers name
@@ -23,12 +23,19 @@
                               <th>
                                 Expected Nos
                               </th>
+                                <th>
+                                  Venue
+                              </th>
+                                <th>
+                                    Location
+                                </th>
                               <th>
                                 Training date
                               </th>
                               <th>
                                 Training time
                               </th>
+                            
                               <th>
                                 Status
                               </th>
@@ -41,7 +48,7 @@
                             @foreach($sessions as $session)
                             <tr>
                               <td class="py-1">
-                              {{$session->id}}
+                              {{$loop->index+1}}
                               </td>
                               <td>
                               {{$session->user->first_name}} {{$session->user->last_name}}
@@ -50,13 +57,16 @@
                                 {{$session->expected}}
                               </td>
                               <td>
-                                  {{$session->trainnig}}
+                                  {{$session->venue}}
+                              </td>
+                               <td>
+                                  {{$session->location}}
+                              </td>
+                              <td>
+                                {{$session->trainnig}}
                               </td>
                               <td>
                                 {{$session->time}}
-                              </td>
-                              <td>
-                                {{$session->location}}
                               </td>
                               <td>
                                 @if($session->status==0)

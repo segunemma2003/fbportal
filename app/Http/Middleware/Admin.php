@@ -22,6 +22,7 @@ class Admin
         if($user->isAdmin =="1" ||$user->id =="1")
         {
             return $next($request);
+            // return redirect()->route('admin');
         } 
         else{
             return redirect('/trainers/dashboard');

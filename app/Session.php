@@ -12,4 +12,7 @@ class Session extends Model
     public function user(){
     	return $this->belongsTo('App\User');
     }
+    public function report(){
+        return $this->hasOne('App\Reports');
+    }
 }
